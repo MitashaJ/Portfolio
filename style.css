@@ -313,16 +313,21 @@ header .navbar {
   animation: progress 2.4s ease-in-out forwards;
   opacity: 0;
 }
-.skill-per.css{
-  width: 70%;
+.skill-per.htmlcssJs{
+  width: 90%;
   animation-delay: 0.1s;
 }
-.skill-per.javascript{
-  width: 50%;
+
+.skill-per.java{
+  width: 80%;
   animation-delay: 0.1s;
 }
-.skill-per.nodejs{
-  width: 30%;
+.skill-per.react{
+  width: 85%;
+  animation-delay: 0.1s;
+}
+.skill-per.mysql{
+  width: 95%;
   animation-delay: 0.1s;
 }
 @keyframes progress {
@@ -368,7 +373,8 @@ header .navbar {
 
 
 .contact {
-  width: 85%;
+  /* display: inline-block; */
+  width: 100%;
   background: #1B1B1D;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
@@ -431,19 +437,28 @@ header .navbar {
 }
 
 .contact .content .right-side .topic-text {
-  font-size: 23px;
+  text-align: center;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #fff;
+  padding-bottom: 50px;
 }
 
 .contact .right-side .input-box {
   height: 50px;
   width: 100%;
   margin: 12px 0;
+  border-bottom: 2px solid rgba(255, 255, 255,0.4);
+  transition: border-bottom 0.3s ease; 
+}
+
+.contact .right-side .input-box:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .contact .right-side .input-box input,
 .contact .right-side .input-box textarea {
+  color: white;
   height: 100%;
   width: 100%;
   border: none;
@@ -465,7 +480,7 @@ header .navbar {
 
 .contact .right-side .button {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 50px;
 }
 
 .contact .right-side .button input[type="button"] {
@@ -484,9 +499,14 @@ header .navbar {
   background: #1B1B1D;
 }
 
+.left-side .topic{
+  padding-bottom: 8px;
+}
+
+
 @media (max-width: 950px) {
   .contact {
-    width: 90%;
+    width: 100%;
     padding: 30px 40px 40px 35px;
   }
 
