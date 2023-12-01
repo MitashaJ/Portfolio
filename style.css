@@ -282,7 +282,7 @@ header .navbar {
   margin-right: 35px;
   padding: 10px 20px;
   border-radius: 7px;
-  box-shadow: #1dbf73 14px 14px 60px;
+  box-shadow: #1dbf73 16px 14px 40px;
   align-items: center;
   margin-bottom: 60px;
 }
@@ -330,6 +330,11 @@ header .navbar {
   width: 95%;
   animation-delay: 0.1s;
 }
+.skill-per.stream{
+  width: 75%;
+  animation-delay: 0.1s;
+}
+
 @keyframes progress {
   0%{
       width: 0;
