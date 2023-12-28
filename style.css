@@ -674,3 +674,79 @@ header .navbar {
   transition: all 0.3s ease;
 }
   }
+/* Add this CSS code to your existing stylesheet */
+
+/* Update the CSS for your project-slider */
+.project-section {
+  margin-top: 50px;
+}
+
+/* Style for the "My Projects" title */
+.project-section h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-slider .slide {
+  display: flex;
+  background-color: #1B1B1D;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+ /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+ box-shadow: 0 8px 16px rgba(29, 191, 115, 0.4); /* Increased intensity */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-slider .slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-slider .project-info {
+  width: 45%;
+}
+
+.project-slider .project-image {
+  width: 45%;
+}
+
+.project-slider .project-image img {
+  width: 100%; /* Make sure the image takes up the entire space */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Update the CSS for your project-slider */
+
+.fruit{
+  float: left;
+}
+
+.slide {
+  position: relative;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.prevBtn {
+  left: 0;
+}
+
+.nextBtn {
+  right: 0;
+}
