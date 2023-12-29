@@ -174,7 +174,7 @@ header .navbar {
 
 #resumeContainer {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 40%;
   transform: translate(50%, -50%);
   background-color: #1B1B1D;
@@ -186,7 +186,7 @@ header .navbar {
 
 #resumeIframe {
   width: 200%;
-  height: 600px; /* Adjust the height as needed */
+  height: 500px; /* Adjust the height as needed */
 }
 
 
