@@ -10,6 +10,7 @@
 body {
   background: #1B1B1D;
 }
+
 p{
   font-family: 'Fira Sans', sans-serif;
   color: #fff;
@@ -28,10 +29,12 @@ header {
 }
 
 header .navbar {
+  
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+ 
   justify-content: space-between;
 }
 
@@ -174,7 +177,7 @@ header .navbar {
 
 #resumeContainer {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 40%;
   transform: translate(50%, -50%);
   background-color: #1B1B1D;
@@ -186,7 +189,7 @@ header .navbar {
 
 #resumeIframe {
   width: 200%;
-  height: 600px; /* Adjust the height as needed */
+  height: 500px; /* Adjust the height as needed */
 }
 
 
@@ -367,6 +370,69 @@ header .navbar {
 }
 
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-section {
+  padding: 50px;
+  background-color: #1B1B1D;
+  color: #fff;
+}
+
+.section-headline {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  margin-right: 20px;
+}
+
+.profile-image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.text-content {
+  flex-grow: 1;
+}
+
+.text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-button {
+  margin-top: 30px;
+  position: relative;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: solid #1dbf73 2px;
+  box-shadow: #1dbf73 0px 19px 138px, #1dbf73 0px 5px 2px;
+  background-color: #1B1B1D;
+  
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-left: 16px;
+}
+
+.contact-button:hover {
+  background-color: #333;
+}
+
 
 
 
@@ -427,7 +493,7 @@ header .navbar {
 }
 
 .skill-per.java{
-  width: 80%;
+  width: 85%;
   animation-delay: 0.1s;
 }
 .skill-per.react{
@@ -442,6 +508,13 @@ header .navbar {
   width: 75%;
   animation-delay: 0.1s;
 }
+/* Add these styles for the node class */
+.skill-per.node {
+  width: 85%; /* Adjust as needed */
+  animation-delay: 0.1s; }
+
+
+
 
 @keyframes progress {
   0%{
