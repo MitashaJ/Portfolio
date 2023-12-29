@@ -12,30 +12,25 @@
 <body>
   <header>
     <nav class="navbar">
-        <p>Portfolio<span>.</span></p>
+      <p>Portfolio<span>.</span></p>
       <ul class="menu-links">
-        <li><a href="#">Fiverr Business</a></li>
-        <li><a href="#">Explore</a></li>
-        <li class="language-item">
-          <a href="#">
-            <span class="material-symbols-outlined">language</span>
-            English
-          </a>
-        </li>
-        <li><a href="#">Become a Seller</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li class="join-btn"><a href="#">Join Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <span id="close-menu-btn" class="material-symbols-outlined">close</span>
       </ul>
       <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
     </nav>
   </header>
 
-  <section class="hero-section">
+  <section id="home" class="hero-section">
     <div class="content">
       <h2>Hello, I'm</h2>
       <h1>Mitasha Jadhav</h1>
       <h3>a full-stack developer</h3>
+      
 
       <button class="button" onclick="toggleResume()">View Resume</button>
     </div>
@@ -45,7 +40,27 @@
     </div>
 </section>
 
-<div class="skills">
+
+<section id="about" class="about-section">
+  <div class="content">
+   
+    <div class="about-content">
+      <div class="profile-image">
+        <img src="images\Profile.jpg" alt="Profile Image">
+      </div>
+      <div class="text-content">
+        <p >
+          <h2 class="section-headline">More about me</h2>
+          Building beautiful and functional websites for the modern web fuels my passion. I'm an energetic Web Developer who embraces the ever-evolving landscape, adept at mastering new technologies and delivering stunning results across diverse platforms and devices.
+        </p>
+        <button class="contact-button" onclick="scrollToContact()">Contact Me</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="skills" class="skills">
   <h2>My Skills</h2>
 </div>
 
@@ -54,7 +69,7 @@
       <span class="title">Java</span>
       <div class="skill-bar">
           <span class="skill-per java">
-              <span class="tooltip">80%</span>
+              <span class="tooltip">85%</span>
           </span>
       </div>
   </div>
@@ -75,14 +90,15 @@
       </div>
   </div>
   
-    <div class="skill-box">
-        <span class="title">Node</span>
-        <div class="skill-bar">
-            <span class="skill-per nodejs">
-                <span class="tooltip">80%</span>
-            </span>
-        </div>
+  <div class="skill-box">
+    <span class="title">Node</span>
+    <div class="skill-bar">
+      <span class="skill-per node" data-percentage="80">
+        <span class="tooltip">85%</span>
+      </span>
     </div>
+  </div>
+  
      
     <div class="skill-box">
       <span class="title">Mysql</span>
@@ -105,7 +121,7 @@
     </div>
 
 
-    <section class="project-section">
+    <section id="projects" class="project-section">
       <h2>My Projects</h2>
 
       
@@ -175,7 +191,7 @@
       
     </div>
 
-    <div class="contact">
+    <div id="contact"  class="contact">
       <div class="content">
         <div class="left-side">
           <div class="address details">
@@ -289,6 +305,10 @@ function toggleResume() {
 
   // // Initial display of the first slide
   // showSlide(currentSlide);
+  function scrollToContact() {
+      const contactSection = document.querySelector('.contact');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
 
 
   var slideIndex = 1;
@@ -307,7 +327,34 @@ function showDivs(n) {
      x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+
+
+
 }
+
+   // Create an Intersection Observer
+   const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.1, // Adjust the threshold as needed
+    });
+
+    // Target the skill box element
+    const skillBox = document.getElementById('skillBox');
+
+    // Observe the skill box
+    observer.observe(skillBox);
+
+function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // If the skill box is in the viewport, add the animation class
+          entry.target.classList.add('animate');
+          // Stop observing once animation is triggered (optional)
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+ 
 </script>
 
 
