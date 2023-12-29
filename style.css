@@ -77,7 +77,7 @@ header .navbar {
 
 .hero-section {
   height: 100vh;
-  background-image: url("images/hero-img.jpg");
+ 
   background-position: center;
   background-size: cover;
   position: relative;
@@ -140,7 +140,24 @@ header .navbar {
   margin-left: 10px;
   transition: all 0.5s ease;
 }
+.resume-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
 
+.resume-button button {
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: solid #1dbf73 1px;
+  box-shadow: #1dbf73;
+  box-shadow: #1dbf73 -5px 5px, #1dbf73 -10px 10px, #1dbf73 -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  cursor: pointer;
+  background-color: #1B1B1D;
+  color: #fff;
+  transition: all 0.5s ease;
+}
 .hero-section .tags li a {
   text-decoration: none;
   color: #fff;
@@ -154,6 +171,27 @@ header .navbar {
   color: #000;
   background: #fff;
 }
+
+#resumeContainer {
+  position: absolute;
+  top: 60%;
+  right: 40%;
+  transform: translate(50%, -50%);
+  background-color: #1B1B1D;
+  color: #fff;
+  padding: 30px;
+  display: none;
+  max-width: 500px; /* Adjust the max-width as needed */
+}
+
+#resumeIframe {
+  width: 200%;
+  height: 600px; /* Adjust the height as needed */
+}
+
+
+
+
 
 .navbar #hamburger-btn {
   color: #fff;
